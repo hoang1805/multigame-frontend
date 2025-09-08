@@ -1,4 +1,4 @@
-import { Avatar, Button, Dropdown, Layout, Tabs, type MenuProps, type TabPaneProps } from "antd";
+import { Avatar, Button, Dropdown, Layout } from "antd";
 import {
     EditOutlined,
     LogoutOutlined,
@@ -9,12 +9,10 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../../app/store";
 import { toggleSider } from "../../features/app.slice";
-import { useEffect, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import ChangePasswordForm from "../user/ChangePasswordForm";
 import { authService } from "../../features/auth/auth.service";
-import type { CompatibilityProps } from "antd/es/tabs";
-import type { Tab } from "rc-tabs/lib/interface";
 import type { TabHeaderItem } from "./AppTabHeader";
 import AppTabHeader from "./AppTabHeader";
 

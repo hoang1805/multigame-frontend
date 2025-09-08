@@ -37,7 +37,8 @@ export default function Login() {
         }
     };
 
-    return <div className="flex w-full h-screen justify-center">
+    return 
+    <div className="flex w-full h-screen justify-center">
         <div className="flex min-h-full flex-col justify-center sm:px-6 py-12 lg:px-8 max-w-3xl w-full">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>

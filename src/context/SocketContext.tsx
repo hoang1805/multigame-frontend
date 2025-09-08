@@ -37,7 +37,7 @@ export const SocketProvider = ({ children }: { children: ReactNode }) => {
                 initSocket(ns, newToken);
                 loading.hide();
             }
-            catch (err) {
+            catch (err: any) {
                 console.log(err);
                 socket.emit('error', { message: err.message ?? 'Something went wrong!!!' });
                 loading.hide();

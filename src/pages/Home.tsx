@@ -5,7 +5,6 @@ import type { RootState } from "../app/store";
 import type { CaroFoundData } from "../features/caro/caro.data";
 import { loading } from "../utils/global.loading";
 import { useEffect, useState } from "react";
-import { userService } from "../features/user/user.service";
 import { line98Service } from "../features/line98/line98.service";
 import FindMatchModal from "../components/caro/FindMatchModal";
 import { Card, Divider } from "antd";
@@ -22,7 +21,7 @@ export default function Home() {
   const [searching, setSearching] = useState(false);
   const handlePlayCaro = () => {
     const game = 'caro';
-    const socket = initSocket(game, accessToken ?? '');
+    initSocket(game, accessToken ?? '');
     setSearching(true);
 
     on(game, 'caro:found', (data: CaroFoundData) => {

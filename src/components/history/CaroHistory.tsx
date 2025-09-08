@@ -1,14 +1,14 @@
 import { ConfigProvider, Empty, Table, type TableProps } from "antd";
 import { useEffect, useState } from "react";
-import type { Line98 } from "../../features/line98/line98.response";
 import { popupUtil } from "../../utils/popup.util";
 import { caroService } from "../../features/caro/caro.service";
 import type { Caro } from "../../features/caro/caro.response";
 import type { User } from "../../features/user/user.slice";
 import { userService } from "../../features/user/user.service";
 import { loading } from "../../utils/global.loading";
+import type { RenderEmptyHandler } from "antd/es/config-provider";
 
-const renderEmpty = (componentName) => {
+const renderEmpty: RenderEmptyHandler = (componentName) => {
   if (componentName === 'Table.filter') {
     return (
       <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="No data" />

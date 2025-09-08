@@ -1,8 +1,8 @@
 import { axiosClient } from "../axios.client";
-import {
+import type {
   Line98Response,
   PaginationResponse,
-  type GameResponse,
+  GameResponse
 } from "./line98.response";
 
 export const line98Service = {

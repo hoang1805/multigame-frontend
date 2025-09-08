@@ -47,7 +47,7 @@ export default function Line98() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [state, setState] = useState<Line98State | null>(null);
     const [selected, setSelected] = useState<Pos | null>(null);
-    const [time, setTime] = useState<number>(0);
+    // const [time, setTime] = useState<number>(0);
     const [hint, setHint] = useState<HelpSuggestion | null>(null);
     const [awaiting, setAwaiting] = useState(false);
     const [grid, setGrid] = useState<number>(1);
@@ -80,7 +80,7 @@ export default function Line98() {
                     gameOver: game.state.gameOver,
                 });
                 setHelpRemain(game.state.helpRemaining);
-                setTime(game.state.time);
+                // setTime(game.state.time);
 
                 emit('line98', 'join', { matchId: parseInt(matchId ?? '', 10) });
             } catch (err) {

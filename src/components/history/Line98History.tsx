@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { line98Service } from "../../features/line98/line98.service";
 import type { Line98 } from "../../features/line98/line98.response";
 import { popupUtil } from "../../utils/popup.util";
+import type { RenderEmptyHandler } from "antd/es/config-provider";
 
-const renderEmpty = (componentName) => {
+const renderEmpty: RenderEmptyHandler = (componentName) => {
   if (componentName === 'Table.filter') {
     return (
       <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="No data" />
